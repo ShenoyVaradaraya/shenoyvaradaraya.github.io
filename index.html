@@ -17,34 +17,300 @@
   <title>Varadaraya Shenoy | Research Engineer </title>
 
 
-<body>
-  <section id="about">
+<body class="bg">
+<div class="loader-wrapper">
+    <div class="loader"></div>
+</div>
+<div class="d-flex toggled" id="wrapper">
+    <div class="bg-dark border-right" id="sidebar-wrapper">
+        <br>
+        <a href="#" class="sidebar-close">
+            <div class="sidebar-heading fa fa-times"></div>
+        </a>
+        <div class="list-group" id="menu">
+            <div class="en">
+                <div class="nav">
+                    <a lang="en" onclick="event.preventDefault()" href="#home"
+                       class="home-nav page-scroll list-group-item list-group-item-action bg-dark active">Home</a>
+                    <a lang="en" onclick="event.preventDefault()" href="#about"
+                       class="about-nav page-scroll list-group-item list-group-item-action bg-dark">About</a>
+                    <a lang="en" onclick="event.preventDefault()" href="#skills"
+                       class="skills-nav page-scroll list-group-item list-group-item-action bg-dark">Skills</a>
+                    <a lang="en" onclick="event.preventDefault()" href="#blogs"
+                       class="blogs-nav page-scroll list-group-item list-group-item-action bg-dark">Blogs</a>
+                    <a lang="en" onclick="event.preventDefault()" href="#contact"
+                       class="contact-nav page-scroll list-group-item list-group-item-action bg-dark">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="page-content-wrapper">
+        <nav class="navbar navbar-dark fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header page-scroll">
+                    <button id="menu-toggle" class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="menu fa fa-bars"></span>
+                    </button>
+                    <a href="#home" class="navbar-brand en" lang="en">
+                        <img src="images/logo.png" class="navbar-brand-logo" alt="Ganesh Kumar M Logo">
+                        Ganesh Kumar M
+                    </a><a href="#home" class="navbar-brand ta" lang="ta">
+                    <img src="images/logo.png" class="navbar-brand-logo" alt="Ganesh Kumar M Logo">
+                    கணேஷ் குமார் மா
+                </a>
+                </div>
+            </div>
+        </nav>
+        <div class="scroll-container">
+            <section id="home">
+                <div class="container-fluid bg">
+                    <div class="row">
+                        <div class="next-page">
+                            <p class="down-arrow-text">SCROLL DOWN</p>
+                            <div class="down-arrow-icon"><span class="fa fa-chevron-down"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="about">
                 <span class="title en" lang="en">about me</span>
                 <h2 class="subtitle en" lang="en">Education</h2>
                 <div class="row education">
                     <div class="en col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-4 college box">
                         <h4 lang="en">B.Tech, Electronics and Communications</h4>
                         <h6 lang="en">PES University</h6>
-                        <p class="duration" lang="en">2015 - 2019</p><br>
+                        <p class="duration" lang="en">2013 - 2017</p><br>
                         <p class="description" lang="en">
                             Scored 8.15 CGPA.<br>
                             Excelled in programming and control systems design.
                         </p>
                     </div>
                 </div>
-    
-  </main>
-
-  <!-- typed.js -->
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script type="text/javascript">
-    var typed = new Typed('.typing',{
-      strings: ["Research Engineer", "Developer", "Quick Learner"],
-      loop: true,
-      typeSpeed: 80,
-      backSpeed: 40
-    });
-  </script>
+                <h2 class="subtitle en" lang="en">Experience</h2>
+                <div class="row experience">
+                    <div class="en col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-3 amazon-sde2 box">
+                        <h4 lang="en">Software Development Engineer II</h4>
+                        <h6 lang="en">Amazon</h6>
+                        <p class="duration" lang="en">May, 2021 - Current</p><br>
+                        <p class="description" lang="en">
+                            Building highly customized and seamless payment experience to delight our customers all around the world.
+                        </p>
+                    </div>
+                    <div class="ta col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-3 amazon-sde2 box">
+                        <h4 lang="ta">மென்பொருள் மேம்பாட்டு பொறியாளர் II</h4>
+                        <h6 lang="ta">அமேசான்</h6>
+                        <p class="duration" lang="ta">மே, 2021 - நடப்பு</p><br>
+                        <p class="description" lang="ta">
+                            உலகெங்கிலும் உள்ள எங்கள் வாடிக்கையாளர்களை மகிழ்விக்க மிகவும் தனிப்பயனாக்கப்பட்ட மற்றும் தடையற்ற கட்டண அனுபவத்தை உருவாக்குதல்.
+                        </p>
+                    </div>
+                    <div class="en col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-4 optum-se box no-border">
+                        <h4 lang="en">Software Engineer</h4>
+                        <h6 lang="en">OptumInsight India</h6>
+                        <p class="duration" lang="en">Sep, 2019 - Apr, 2021</p><br>
+                        <p class="description" lang="en">
+                            Hands on experience in designing and developing products to benchmark surgery procedures,
+                            manage and report surgeon's preference cards.
+                        </p>
+                    </div>
+                    <div class="ta col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-4 optum-se box no-border">
+                        <h4 lang="ta">மென்பொருள் பொறியாளர்</h4>
+                        <h6 lang="ta">ஆப்டம் இன்சைட் இந்தியா</h6>
+                        <p class="duration" lang="ta">செப், 2019 - ஏப்ரல், 2021</p><br>
+                        <p class="description" lang="ta">
+                            பெஞ்ச்மார்க் அறுவை சிகிச்சை முறைகளுக்கு தயாரிப்புகளை வடிவமைப்பதில் மற்றும் மேம்படுத்துவதில்
+                            அனுபவம், அறுவை சிகிச்சை நிபுணரின் விருப்ப அட்டைகளை நிர்வகித்தல் மற்றும் புகாரளித்தல்.
+                        </p>
+                    </div>
+                    <div class="en col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-4 optum-ase box no-border">
+                        <h4>Associate Software Engineer</h4>
+                        <h6>OptumInsight India</h6>
+                        <p class="duration">Jul, 2017 - Aug, 2019</p><br>
+                        <p class="description">
+                            Hands on experience in designing and developing products to evaluate surgeon's performance,
+                            reduce procedure costs and effectively utilize operating rooms.
+                        </p>
+                    </div>
+                    <div class="ta col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-4 optum-ase box no-border">
+                        <h4>இணை மென்பொருள் பொறியாளர்</h4>
+                        <h6>ஆப்டம் இன்சைட் இந்தியா</h6>
+                        <p class="duration">ஜூலை, 2017 - ஆகஸ்ட், 2019</p><br>
+                        <p class="description">
+                            அறுவைசிகிச்சை நிபுணரின் செயல்திறனை மதிப்பிடுவதற்கும், செயல்முறை செலவுகளைக் குறைப்பதற்கும்
+                            மற்றும் இயக்க அறைகளை திறம்பட பயன்படுத்துவதற்கும் தயாரிப்புகளை வடிவமைப்பதில் மற்றும்
+                            மேம்படுத்துவதில் அனுபவம் உள்ளது.
+                        </p>
+                    </div>
+                    <!--<div class="col-md-3 col-xs-12 col-sm-12 amazon box no-border">
+                        <h4>SDE II</h4>
+                        <h6>Amazon</h6>
+                        <p class="duration">May, 2021 - Current</p><br>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus nobis animi assumenda sint recusandae! Dolor placeat debitis animi illum quo repellendus pariatur.</p>
+                    </div>-->
+                </div>
+            </section>
+            <section id="skills">
+                <span class="title en" lang="en">my skills</span>
+                <span class="title ta" lang="ta">திறன்கள்</span>
+                <h2 class="subtitle en" lang="en">Top Skills</h2>
+                <h2 class="subtitle ta" lang="ta">சிறந்த திறன்கள்</h2>
+                <div class="row skill java">
+                    <div class="row">
+                        <div class="en col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8" lang="en">
+                            Java
+                            <span>80%</span>
+                        </div>
+                        <div class="ta col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8" lang="ta">
+                            ஜாவா
+                            <span>80%</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row skill sql">
+                    <div class="row">
+                        <div class="en col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8" lang="en">
+                            SQL
+                            <span>80%</span>
+                        </div>
+                        <div class="ta col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8" lang="ta">
+                            எஸ்.கியூ.எல்
+                            <span>80%</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row skill html-css">
+                    <div class="row">
+                        <div class="en col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8" lang="en">
+                            HTML & CSS
+                            <span>80%</span>
+                        </div>
+                        <div class="ta col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8" lang="ta">
+                            எச்.டி.எம்.எல் & சி.எஸ்.எஸ்
+                            <span>80%</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row skill python">
+                    <div class="row">
+                        <div class="en col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8" lang="en">
+                            Python
+                            <span>70%</span>
+                        </div>
+                        <div class="ta col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8" lang="ta">
+                            பைதஂதான்
+                            <span>70%</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row skill javascript">
+                    <div class="row">
+                        <div class="en col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8" lang="en">
+                            Javascript
+                            <span>70%</span>
+                        </div>
+                        <div class="ta col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8" lang="ta">
+                            ஜாவாஸ்கிரிப்ட்
+                            <span>70%</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row skill system-design">
+                    <div class="row">
+                        <div class="en col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8" lang="en">
+                            System Design
+                            <span>60%</span>
+                        </div>
+                        <div class="ta col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8" lang="ta">
+                            கணினி வடிவமைப்பு
+                            <span>60%</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="blogs">
+                <span class="title en" lang="en">my blogs</span>
+                <span class="title ta" lang="ta">வலைப்பதிவுகள்</span>
+                <h2 class="subtitle en" lang="en">Recent Blogs</h2>
+                <h2 class="subtitle ta" lang="ta">சமீபத்திய வலைப்பதிவுகள்</h2>
+                <br><br class="ta">
+                <div class="row blogs">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-2 my-auto view-more">
+                        <a lang="en" class="en" href="https://ganeshkumarm1.medium.com" target="_blank">
+                            <button class="btn btn-primary view-more-articles">More blogs&nbsp;&nbsp;&nbsp;<span
+                                    class="fa fa-external-link-square"></span></button>
+                        </a>
+                        <a lang="ta" class="ta" href="https://ganeshkumarm1.medium.com" target="_blank">
+                            <button class="btn btn-primary view-more-articles">வலைப்பதிவுகள்&nbsp;&nbsp;&nbsp;<span
+                                    class="fa fa-external-link-square"></span></button>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section id="contact">
+                <span class="title en" lang="en">contact</span>
+                <span class="title ta" lang="ta">தொடர்பு கொள்க</span>
+                <h2 class="subtitle en" lang="en">Get In Touch</h2><br>
+                <h2 class="subtitle ta" lang="ta">தொடர்பு கொள்ளுங்கள்</h2>
+                <form method="post" action="https://formspree.io/ganeshkumar.m1996@gmail.com"
+                      class="en form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8">
+                    <input id="name" class="form-control en" name="Name" type="text" placeholder="Name" lang="en"
+                           required/>
+                    <input id="email" class="form-control en" name="Email" type="email" placeholder="Email" lang="en"
+                           required/>
+                    <textarea id="message" row="10" name="Message" class="form-control en" placeholder="Message"
+                              lang="en" required></textarea>
+                    <input type="hidden" name="_next" value="https://ganeshkumarm.me/index.html#contact"/>
+                    <input type="hidden" name="_subject" value="New Message"/>
+                    <button id="submit" class="btn en" type="submit" lang="en">Submit</button>
+                </form>
+                <form method="post" action="https://formspree.io/ganeshkumar.m1996@gmail.com"
+                      class="ta form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8">
+                    <input id="name" class="form-control ta" name="Name" type="text" placeholder="பெயர்" lang="ta"
+                           required/>
+                    <input id="email" class="form-control ta" name="Email" type="email" placeholder="மின்னஞ்சல் முகவரி"
+                           lang="ta" required/>
+                    <textarea id="message" row="10" name="Message" class="form-control ta" placeholder="செய்தி"
+                              lang="ta" required></textarea>
+                    <input type="hidden" name="_next" value="https://ganeshkumarm.me/index.html#contact"/>
+                    <input type="hidden" name="_subject" value="New Message"/>
+                    <button id="submit" class="btn ta" type="submit" lang="ta">சமர்ப்பிக்கவும்</button>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
 
 
   <!-- jQuery-->
