@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-KDQHDQ08P2');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Varadaraya Ganesh Shenoy - Portfolio</title>
@@ -382,7 +392,7 @@
     <header id="home">
         <div class="container">
             <div class="profile-pic">
-                <img src="assets/img/jpg/Professional-Picture-Me.jpg" alt="Varadaraya Ganesh Shenoy">
+                <img src="assets/img/profile.jpg" alt="Varadaraya Ganesh Shenoy">
             </div>
             <h1>Varadaraya Ganesh Shenoy</h1>
             <p class="title">Robotics & Computer Vision Engineer</p>
@@ -408,6 +418,7 @@
     <section id="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
+            
             <div class="about-content">
                 <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px;">
                     👋 Hello! I'm a <strong>Robotics and Computer Vision Engineer</strong> passionate about creating intelligent systems that interact with the physical world. With expertise in <strong>motion planning</strong>, <strong>computer vision</strong>, and <strong>deep learning</strong>, I develop innovative solutions that bridge the gap between perception and action in autonomous systems.
@@ -425,66 +436,88 @@
                     🔍 <strong>I am actively seeking full-time opportunities</strong> in robotics, computer vision, and autonomous systems. If you're looking for a dedicated engineer with a proven track record of innovative solutions, let's connect!
                 </p>
             </div>
-            <h3 style="margin-top: 30px; color: var(--primary-color);">Technical Skills</h3>
             
-            <h4 style="margin-top: 20px;">Programming</h4>
-            <div class="skills-list">
-                <span class="skill-tag">C++ (STL, Boost)</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">PyTorch</span>
-                <span class="skill-tag">TensorFlow</span>
-                <span class="skill-tag">CUDA</span>
-                <span class="skill-tag">NumPy</span>
-                <span class="skill-tag">Pandas</span>
-                <span class="skill-tag">Matplotlib</span>
-                <span class="skill-tag">SciPy</span>
-            </div>
+            <h3 style="margin-top: 30px; color: var(--primary-color); font-size: 1.5rem; text-align: center;">Technical Expertise</h3>
             
-            <h4 style="margin-top: 20px;">Computer Vision & Deep Learning</h4>
-            <div class="skills-list">
-                <span class="skill-tag">Object detection</span>
-                <span class="skill-tag">Semantic segmentation</span>
-                <span class="skill-tag">Transformer architectures</span>
-                <span class="skill-tag">RNNs</span>
-                <span class="skill-tag">LLMs</span>
-                <span class="skill-tag">Feature extraction</span>
-                <span class="skill-tag">Model compression</span>
-                <span class="skill-tag">Transfer learning</span>
-            </div>
-            
-            <h4 style="margin-top: 20px;">Motion Planning</h4>
-            <div class="skills-list">
-                <span class="skill-tag">A*</span>
-                <span class="skill-tag">D*</span>
-                <span class="skill-tag">RRT*</span>
-                <span class="skill-tag">Hybrid A*</span>
-                <span class="skill-tag">Sampling-Based Planning</span>
-                <span class="skill-tag">Reeds-Shepp Curves</span>
-                <span class="skill-tag">Probabilistic roadmaps</span>
-                <span class="skill-tag">Potential fields</span>
-            </div>
-            
-            <h4 style="margin-top: 20px;">Development Tools</h4>
-            <div class="skills-list">
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">ROS1</span>
-                <span class="skill-tag">ROS2</span>
-                <span class="skill-tag">GDB</span>
-                <span class="skill-tag">Valgrind</span>
-                <span class="skill-tag">Docker</span>
-                <span class="skill-tag">CI/CD pipelines</span>
-                <span class="skill-tag">Jupyter notebooks</span>
-                <span class="skill-tag">Data visualization</span>
-            </div>
-            
-            <h4 style="margin-top: 20px;">ADAS/Automotive</h4>
-            <div class="skills-list">
-                <span class="skill-tag">Perception systems</span>
-                <span class="skill-tag">Motion planning</span>
-                <span class="skill-tag">Safety-critical systems</span>
-                <span class="skill-tag">Lane detection</span>
-                <span class="skill-tag">Sensor fusion</span>
-                <span class="skill-tag">V2X communication</span>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px;">
+                <div class="skill-category">
+                    <h4 style="display: flex; align-items: center; gap: 10px; color: var(--secondary-color); font-size: 1.2rem;">
+                        <span style="font-size: 1.5rem;">💻</span> Programming
+                    </h4>
+                    <div class="skills-list">
+                        <span class="skill-tag"><strong>C++ (STL, Boost)</strong></span>
+                        <span class="skill-tag"><strong>Python</strong></span>
+                        <span class="skill-tag"><strong>PyTorch</strong></span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">CUDA</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">SciPy</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h4 style="display: flex; align-items: center; gap: 10px; color: var(--secondary-color); font-size: 1.2rem;">
+                        <span style="font-size: 1.5rem;">👁️</span> Computer Vision & Deep Learning
+                    </h4>
+                    <div class="skills-list">
+                        <span class="skill-tag"><strong>Object detection</strong></span>
+                        <span class="skill-tag"><strong>Semantic segmentation</strong></span>
+                        <span class="skill-tag"><strong>Transformer architectures</strong></span>
+                        <span class="skill-tag">RNNs</span>
+                        <span class="skill-tag">LLMs</span>
+                        <span class="skill-tag">Feature extraction</span>
+                        <span class="skill-tag">Model compression</span>
+                        <span class="skill-tag">Transfer learning</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h4 style="display: flex; align-items: center; gap: 10px; color: var(--secondary-color); font-size: 1.2rem;">
+                        <span style="font-size: 1.5rem;">🗺️</span> Motion Planning
+                    </h4>
+                    <div class="skills-list">
+                        <span class="skill-tag"><strong>A*</strong></span>
+                        <span class="skill-tag"><strong>RRT*</strong></span>
+                        <span class="skill-tag"><strong>Hybrid A*</strong></span>
+                        <span class="skill-tag">D*</span>
+                        <span class="skill-tag">Sampling-Based Planning</span>
+                        <span class="skill-tag">Reeds-Shepp Curves</span>
+                        <span class="skill-tag">Probabilistic roadmaps</span>
+                        <span class="skill-tag">Potential fields</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h4 style="display: flex; align-items: center; gap: 10px; color: var(--secondary-color); font-size: 1.2rem;">
+                        <span style="font-size: 1.5rem;">🛠️</span> Development Tools
+                    </h4>
+                    <div class="skills-list">
+                        <span class="skill-tag"><strong>Git</strong></span>
+                        <span class="skill-tag"><strong>ROS1/ROS2</strong></span>
+                        <span class="skill-tag">GDB</span>
+                        <span class="skill-tag">Valgrind</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">CI/CD pipelines</span>
+                        <span class="skill-tag">Jupyter notebooks</span>
+                        <span class="skill-tag">Data visualization</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h4 style="display: flex; align-items: center; gap: 10px; color: var(--secondary-color); font-size: 1.2rem;">
+                        <span style="font-size: 1.5rem;">🚗</span> ADAS/Automotive
+                    </h4>
+                    <div class="skills-list">
+                        <span class="skill-tag"><strong>Perception systems</strong></span>
+                        <span class="skill-tag"><strong>Motion planning</strong></span>
+                        <span class="skill-tag">Safety-critical systems</span>
+                        <span class="skill-tag">Lane detection</span>
+                        <span class="skill-tag">Sensor fusion</span>
+                        <span class="skill-tag">V2X communication</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -668,6 +701,62 @@
                 .featured-project .tech-used {
                     margin: 15px 0;
                 }
+                
+                .skill-category {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 20px;
+                    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+                    transition: transform 0.3s, box-shadow 0.3s;
+                }
+                
+                .skill-category:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                }
+                
+                .skills-list {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    margin-top: 15px;
+                }
+                
+                .skill-tag {
+                    background-color: var(--secondary-color);
+                    color: white;
+                    padding: 5px 10px;
+                    border-radius: 20px;
+                    font-size: 0.9rem;
+                    transition: background-color 0.3s;
+                }
+                
+                .skill-tag:hover {
+                    background-color: var(--primary-color);
+                }
+                
+                .project-links {
+                    margin-top: 15px;
+                    display: flex;
+                    gap: 15px;
+                }
+                
+                .github-link {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    background-color: #24292e;
+                    color: white;
+                    padding: 8px 15px;
+                    border-radius: 4px;
+                    text-decoration: none;
+                    font-weight: 500;
+                    transition: background-color 0.3s;
+                }
+                
+                .github-link:hover {
+                    background-color: #000;
+                }
             </style>
             
             <h3 style="text-align: center; margin-bottom: 30px; color: var(--secondary-color);">Featured Projects with Video Demonstrations</h3>
@@ -690,6 +779,11 @@
                             <li>Implemented Boustrophedon coverage algorithms for efficient field operations</li>
                             <li>Integrated GPS-RTK navigation achieving sub-10cm positioning accuracy across large fields</li>
                         </ul>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ShenoyVaradaraya/autonomous-tractor/tree/master" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
                     </div>
                 </div>
                 
@@ -750,6 +844,11 @@
                                 <li>Created an augmented dataset of 5,000+ images with challenging camouflaged scenarios for robust model training</li>
                             </ul>
                         </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ShenoyVaradaraya/deep-res-unet-camouflage" target="_blank" class="github-link">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
@@ -765,6 +864,11 @@
                                 <li>Achieved 40% reduction in settling time compared to traditional Ziegler-Nichols tuning methods</li>
                                 <li>Developed a simulation environment for evaluating controller performance across diverse system dynamics</li>
                             </ul>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ShenoyVaradaraya/genetic-pid-autotuner" target="_blank" class="github-link">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -782,6 +886,11 @@
                                 <li>Created a patch-matching algorithm with adaptive patch sizes based on local texture complexity</li>
                             </ul>
                         </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ShenoyVaradaraya/inpaint-object-removal" target="_blank" class="github-link">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
@@ -797,6 +906,11 @@
                                 <li>Implemented Gaussian Process regression with custom kernels for spatial correlation in uneven terrain</li>
                                 <li>Created an information-theoretic path planning algorithm to maximize information gain during exploration</li>
                             </ul>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ShenoyVaradaraya/BGK_traversability_mapping" target="_blank" class="github-link">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
