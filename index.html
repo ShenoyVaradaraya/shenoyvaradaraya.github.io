@@ -14,6 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Varadaraya Ganesh Shenoy - Portfolio</title>
+    <link rel="icon" href="assets/img/svg/acar.ico" type="image/x-icon">
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -328,6 +329,24 @@
         .project-content {
             padding: 20px;
         }
+         /* Added styling for project image */
+        .project-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
         
         /* Footer Styles */
         footer {
@@ -392,7 +411,7 @@
     <header id="home">
         <div class="container">
             <div class="profile-pic">
-                <img src="assets/img/profile.jpg" alt="Varadaraya Ganesh Shenoy">
+                <img src="assets/img/Professional-Picture-Me.jpg" alt="Varadaraya Ganesh Shenoy">
             </div>
             <h1>Varadaraya Ganesh Shenoy</h1>
             <p class="title">Robotics & Computer Vision Engineer</p>
@@ -874,6 +893,9 @@
                 </div>
                 
                 <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/img/jpg/Inpainting-Object-Removal.jpg" alt="Inpainting Demo">
+                    </div>
                     <div class="project-content">
                         <h3 class="project-title">Region Filling and Object Removal by Exemplar-Based Image Inpainting</h3>
                         <div class="tech-used">
