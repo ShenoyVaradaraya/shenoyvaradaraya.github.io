@@ -183,6 +183,15 @@ section.block{padding:64px 0}
 /* about */
 .about p{color:var(--muted);max-width:64ch;margin-bottom:16px}
 .about p strong{color:var(--text);font-weight:500}
+.about-summary{font-size:1.05rem;color:var(--text)!important;max-width:58ch!important}
+.detail-toggle{margin-top:18px;max-width:68ch}
+.detail-toggle summary{list-style:none;display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--cyan);border:1px solid var(--line);padding:7px 12px;border-radius:5px;cursor:pointer;transition:all .2s;user-select:none}
+.detail-toggle summary::-webkit-details-marker{display:none}
+.detail-toggle summary::before{content:'+';font-size:16px;line-height:1}
+.detail-toggle[open] summary::before{content:'−'}
+.detail-toggle summary:hover{border-color:var(--cyan);background:rgba(34,211,238,.06)}
+.detail-content{margin-top:16px}
+.detail-content p:last-child{margin-bottom:0}
 .stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
 .chip{font-family:var(--mono);font-size:12px;padding:6px 12px;border:1px solid var(--line);border-radius:5px;color:var(--muted)}
 .chip.key{border-color:var(--cyan);color:var(--cyan)}
@@ -241,7 +250,15 @@ body.modal-open{overflow:hidden}
 .xp-item:last-child{border-bottom:1px solid var(--line)}
 .xp-meta .role{font-family:var(--mono);font-size:11px;color:var(--muted-dim);letter-spacing:.05em}
 .xp-meta .date{font-family:var(--mono);font-size:11px;color:var(--cyan);margin-top:4px}
-.xp-co{font-family:var(--display);font-size:1.08rem;font-weight:600;margin-bottom:10px}
+.xp-co{font-family:var(--display);font-size:1.08rem;font-weight:600;margin-bottom:7px}
+.xp-summary{color:var(--muted);font-size:.94rem;line-height:1.55;max-width:68ch}
+.xp-details{margin-top:12px}
+.xp-details summary{list-style:none;display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11.5px;color:var(--cyan);cursor:pointer;border:1px solid var(--line);padding:6px 11px;border-radius:5px;transition:all .2s;user-select:none}
+.xp-details summary::-webkit-details-marker{display:none}
+.xp-details summary::before{content:'+';font-size:15px;line-height:1}
+.xp-details[open] summary::before{content:'−'}
+.xp-details summary:hover{border-color:var(--cyan);background:rgba(34,211,238,.06)}
+.xp-details ul{margin-top:14px}
 .xp-body ul{list-style:none}
 .xp-body li{color:var(--muted);font-size:.94rem;margin-bottom:7px;padding-left:18px;position:relative}
 .xp-body li::before{content:'▸';position:absolute;left:0;color:var(--cyan);font-size:.8rem;top:1px}
@@ -266,6 +283,61 @@ footer{border-top:1px solid var(--line);margin-top:20px}
 }
 .status-bar .st{display:flex;align-items:center;gap:7px}
 .status-bar .st .d{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 7px var(--green)}
+
+
+
+/* ---------- MOBILE HARDENING ---------- */
+nav{padding-top:env(safe-area-inset-top)}
+footer{padding-bottom:env(safe-area-inset-bottom)}
+.flipinfo{min-height:92px;width:min(100%,360px);padding-inline:12px}
+
+@media(max-width:700px){
+  .wrap{padding-inline:18px}
+  .hero{padding-top:36px}
+  .hero-grid{gap:18px}
+  h1{font-size:clamp(1.8rem,8.6vw,2.55rem)}
+  .hero-target{
+    display:flex;
+    align-items:baseline;
+    gap:.18em;
+    width:100%;
+    max-width:100%;
+    font-size:clamp(1.48rem,7.35vw,2.4rem);
+  }
+  .roller{width:9.5ch;flex:0 0 9.5ch}
+  .lede{font-size:.98rem}
+  section.block{padding:48px 0}
+  .sec-head{margin-bottom:24px}
+  .viewport{padding:18px 0 12px}
+  .video-modal{
+    padding:max(58px,env(safe-area-inset-top)) 12px max(20px,env(safe-area-inset-bottom));
+    backdrop-filter:blur(8px) saturate(.82);
+    -webkit-backdrop-filter:blur(8px) saturate(.82);
+  }
+  .video-shell{width:100%}
+  .video-shell video{max-height:72vh;border-radius:8px}
+  .video-close{right:4px;top:-46px}
+  .hero-left::before,.flipwrap::before,.contact-box::before,.about .wrap::before,.xp::before{filter:none!important}
+  .xp-item{padding:19px 0}
+  .xp-summary,.xp-body li{font-size:.91rem}
+  .xp-details summary{min-height:42px;padding:8px 12px}
+}
+
+@media(max-width:420px){
+  .nav-inner{padding-inline:14px}
+  .nav-links{gap:16px;font-size:11px}
+  .hero-target{font-size:clamp(1.32rem,7.1vw,1.72rem)}
+  .roller{width:9.35ch;flex-basis:9.35ch}
+  .hero-cta,.contact-links{flex-direction:column;align-items:stretch}
+  .hero-cta .btn,.contact-links .btn{width:100%;justify-content:center}
+  .contact-box{padding:28px 0}
+  .status-bar{padding-inline:18px;flex-direction:column;align-items:flex-start}
+}
+
+@media(max-width:350px){
+  .hero-target{font-size:1.24rem}
+  .wrap{padding-inline:14px}
+}
 
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
@@ -302,10 +374,10 @@ gtag('config','G-XXXXXXXXXX',{
     <div class="hero-left">
       <div class="eyebrow">Varadaraya Ganesh Shenoy</div>
       <h1>Motion planning for<br><span class="hero-target"><span>autonomous</span><span class="roller"><span class="roll-inner" id="roll">forklifts</span></span></span></h1>
-      <p class="lede">Classical planning foundations — now building learning-based planners like active inference.</p>
+      <p class="lede">Robotics software engineer building real-time motion planning, control, and autonomy systems for vehicles and robots.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="#experience">▸ Experience</a>
-        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        <a class="btn btn-primary" href="#about">▸ About me</a>
+        <a class="btn btn-ghost" href="#experience">Experience</a>
       </div>
     </div>
     <div class="hero-right">
@@ -335,25 +407,31 @@ gtag('config','G-XXXXXXXXXX',{
   <div class="wrap">
     <div class="sec-head">
       <span class="sec-tag">01</span>
-      <span class="sec-title">About</span>
+      <span class="sec-title">About Me</span>
       <span class="sec-rule"></span>
     </div>
-    <p>I design the part of an autonomous system that has to make a decision and commit to it — the planner. My question is always the same: <strong>how does a robot choose what to do next, in real time, when it isn't certain about the world?</strong></p>
-    <p>I didn't start in research. I started shipping. At <strong>Flux Auto</strong>, I built real-time C++ planning and control for autonomous forklifts and tractors — global coverage planners, local trajectory generation, and multi-robot coordination that ran in production across two countries.</p>
-    <p>That production grounding is why my research reads differently from purely academic work. My M.S. thesis at the <strong>University of Minnesota</strong> applies <strong>active inference</strong> to trajectory prediction and control — a more principled way to handle uncertainty — validated in CARLA and on real perception hardware.</p>
+    <p class="about-summary">I build production-grade motion planning, control, and autonomy software in modern C++ and ROS. Experience spans autonomous forklifts, tractors, cars, drones, and agricultural robots.</p>
     <div class="stack">
       <span class="chip key">Modern C++ (17/20)</span>
       <span class="chip key">Motion Planning</span>
-      <span class="chip key">Active Inference</span>
       <span class="chip key">ROS1 / ROS2</span>
-      <span class="chip key">Real-time / multithreading</span>
+      <span class="chip key">Active Inference</span>
+      <span class="chip key">Real-time Systems</span>
       <span class="chip key">CUDA</span>
-      <span class="chip">MPC / Trajectory Opt</span>
+      <span class="chip">MPC / Trajectory Optimization</span>
       <span class="chip">A* · D* · Hybrid A*</span>
       <span class="chip">RRT* · PRM</span>
       <span class="chip">LQR · PID</span>
       <span class="chip">CARLA · Gazebo</span>
     </div>
+    <details class="detail-toggle">
+      <summary>Detailed background</summary>
+      <div class="detail-content">
+        <p>I design decision-making systems that choose safe, feasible robot actions in real time under uncertainty.</p>
+        <p>At <strong>Flux Auto</strong>, I shipped C++ planning and control for autonomous forklifts and tractors, including coverage planning, local trajectory generation, and multi-robot coordination used in production across two countries.</p>
+        <p>My M.S. research at the <strong>University of Minnesota</strong> applies active inference to trajectory prediction and control, validated in CARLA and on real perception hardware.</p>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -362,7 +440,7 @@ gtag('config','G-XXXXXXXXXX',{
   <div class="wrap">
     <div class="sec-head">
       <span class="sec-tag">02</span>
-      <span class="sec-title">Work &amp; Experience</span>
+      <span class="sec-title">Experience</span>
       <span class="sec-rule"></span>
     </div>
     <div class="xp">
@@ -371,11 +449,12 @@ gtag('config','G-XXXXXXXXXX',{
         <div class="xp-meta"><div class="role">Robotics SW Engineer</div><div class="date">APR 2026 — NOW</div></div>
         <div class="xp-body">
           <div class="xp-co">West Central Research &amp; Outreach Center</div>
-          <ul>
-            <li>Perception, motion planning & embedded software for autonomous agricultural robots and tractor platforms.</li>
+          <p class="xp-summary">Building ROS2 perception, planning, and embedded autonomy for agricultural robots and tractor platforms.</p>
+          <details class="xp-details"><summary>View details</summary><ul>
+            <li>Perception, motion planning &amp; embedded software for autonomous agricultural robots and tractor platforms.</li>
             <li>Navigation and obstacle avoidance for unstructured field environments; full-stack bring-up and field testing.</li>
             <li>ROS2 autonomy integrating sensors and compute for real-world deployment.</li>
-          </ul>
+          </ul></details>
         </div>
       </div>
 
@@ -383,11 +462,11 @@ gtag('config','G-XXXXXXXXXX',{
         <div class="xp-meta"><div class="role">Student Associate</div><div class="date">SEP — DEC 2025</div></div>
         <div class="xp-body">
           <div class="xp-co">Honda Research Institute</div>
-          <ul>
+          <p class="xp-summary">Developed autonomous-parking evaluation pipelines in CARLA and ROS2.</p>
+          <details class="xp-details"><summary>View details</summary><ul>
             <li>Built a CARLA–ROS2 pipeline for reproducible autonomous-parking sim-to-real validation.</li>
-            <li>Spline-based motion planner with kinematic + collision constraints for tight-space maneuvers.</li>
             <li>Led large-scale evaluation tooling to surface planner failure modes systematically.</li>
-          </ul>
+          </ul></details>
         </div>
       </div>
 
@@ -395,12 +474,12 @@ gtag('config','G-XXXXXXXXXX',{
         <div class="xp-meta"><div class="role">Graduate Research Assistant</div><div class="date">APR 2024 — JUL 2025</div></div>
         <div class="xp-body">
           <div class="xp-co">University of Minnesota</div>
-          <ul>
+          <p class="xp-summary">Researched active-inference, MPC, LQR, and perception systems for autonomous driving.</p>
+          <details class="xp-details"><summary>View details</summary><ul>
             <li>Active-inference controller for car-following with realistic stop-and-go dynamics in CARLA — <span class="m">95% prediction accuracy</span>.</li>
-            <li>MPC & LQR controllers for speed tracking, headway regulation, lane keeping — real-time C++17 loops.</li>
-            <li>YOLO-based perception pipeline optimized for fisheye-camera VRU detection.</li>
-            <li>Building an open-source Active Inference C++ library — generative models, belief updates, action-selection policies.</li>
-          </ul>
+            <li>MPC &amp; LQR controllers for speed tracking, headway regulation, and lane keeping in real-time C++17 loops.</li>
+            <li>YOLO-based perception pipeline optimized for fisheye-camera detection.</li>
+          </ul></details>
           <div class="xp-links">
             <a class="video-link" href="assets/videos/aif-car-following.mp4" data-video="assets/videos/aif-car-following.mp4">▸ Active inference demo</a>
             <a href="https://github.com/ShenoyVaradaraya" target="_blank" rel="noopener">▸ GitHub</a>
@@ -412,11 +491,13 @@ gtag('config','G-XXXXXXXXXX',{
         <div class="xp-meta"><div class="role">Robotics SW Intern</div><div class="date">JUN — DEC 2024</div></div>
         <div class="xp-body">
           <div class="xp-co">BGarage</div>
-          <ul>
-            <li>Spline-based trajectory generation & local planning in C++, deployed on NVIDIA Orin under latency limits.</li>
+          <p class="xp-summary">Optimized real-time trajectory generation and warehouse-routing software on NVIDIA Orin.</p>
+          <details class="xp-details"><summary>View details</summary><ul>
+            <li>TSP-based routing for warehouse scanning; profiling tools for numerical and timing stability.</li>
+            <li>Spline-based trajectory generation and local planning in C++, deployed on NVIDIA Orin under latency limits.</li>
             <li>Optimized real-time pipeline — <span class="m">CPU −20%, memory −25%</span>.</li>
-            <li>TSP-based routing for warehouse scanning; profiling tools for numerical & timing stability.</li>
-          </ul>
+
+          </ul></details>
         </div>
       </div>
 
@@ -424,12 +505,13 @@ gtag('config','G-XXXXXXXXXX',{
         <div class="xp-meta"><div class="role">Motion Planning Engineer</div><div class="date">MAY 2021 — JUL 2023</div></div>
         <div class="xp-body">
           <div class="xp-co">Flux Auto</div>
-          <ul>
+          <p class="xp-summary">Shipped production motion planning, control, and fleet coordination for autonomous forklifts and tractors.</p>
+          <details class="xp-details"><summary>View details</summary><ul>
             <li>Global coverage planner for an autonomous tractor — cellular decomposition + boustrophedon, <span class="m">95%+ field coverage</span>.</li>
             <li>Curvature-aware speed control for autonomous forklifts — <span class="m">80% fewer accidents</span>.</li>
-            <li>Multi-robot fleet coordination & scheduling (8-robot fleet) — <span class="m">deadlocks −60%</span>.</li>
+            <li>Multi-robot fleet coordination and scheduling for an 8-robot fleet — <span class="m">deadlocks −60%</span>.</li>
             <li>Real-time MPC/PID control at up to <span class="m">50Hz</span>, integrated into production ROS1/ROS2 stacks.</li>
-          </ul>
+          </ul></details>
           <div class="xp-links">
             <a class="video-link" href="assets/videos/tractor-auto.mp4" data-video="assets/videos/tractor-auto.mp4">▸ Tractor coverage demo</a>
             <a class="video-link" href="assets/videos/vel-profile.mp4" data-video="assets/videos/vel-profile.mp4">▸ Speed-profile demo</a>
@@ -490,7 +572,9 @@ gtag('config','G-XXXXXXXXXX',{
     else{const u=(t-.75)/.25;r=255;g=230-190*u;b=40;}
     return `rgb(${r|0},${g|0},${b|0})`;
   });
-  let w=0,h=0,dpr=1,raf=0,last=0,travel=0,frame=0;
+  let w=0,h=0,dpr=1,raf=0,lastMotion=0,lastFrame=0,travel=0,frame=0;
+  let mobile=window.matchMedia('(max-width: 700px)').matches;
+  let targetFrameMs=mobile?33.3:16.7;
 
   function add(ring,x,y,z,size=1,intensity=1){rings[ring].push(x,y,z,size,intensity)}
   function hash(a,b,c){const n=Math.sin(a*12.9898+b*78.233+c*37.719)*43758.5453;return n-Math.floor(n)}
@@ -593,14 +677,18 @@ gtag('config','G-XXXXXXXXXX',{
   function resize(){
     w=innerWidth;h=innerHeight;
     // High DPR costs heavily on full-screen canvas; 1.35 keeps points crisp without 4x pixel load.
-    dpr=Math.min(window.devicePixelRatio||1,1.35);
+    mobile=window.matchMedia('(max-width: 700px)').matches;
+    targetFrameMs=mobile?33.3:16.7;
+    dpr=Math.min(window.devicePixelRatio||1,mobile?1.1:1.35);
     canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);
     canvas.style.width=w+'px';canvas.style.height=h+'px';
     ctx.setTransform(dpr,0,0,dpr,0,0);
   }
 
   function draw(t=0){
-    const dt=Math.min(34,t-last||16.7);last=t;
+    if(!reduce&&lastFrame&&t-lastFrame<targetFrameMs){raf=requestAnimationFrame(draw);return;}
+    const dt=Math.min(50,t-lastMotion||targetFrameMs);
+    lastMotion=t;lastFrame=t;
     if(!reduce)travel=(travel+dt*.0046)%FAR;
     frame++;
     ctx.globalAlpha=1;ctx.fillStyle='#05080d';ctx.fillRect(0,0,w,h);
@@ -611,7 +699,7 @@ gtag('config','G-XXXXXXXXXX',{
 
     const yaw=Math.sin(t*.00012)*.035, cy=Math.cos(yaw), sy=Math.sin(yaw);
     const f=Math.min(w,h)*1.05, cx=w*.5, horizon=h*.54, camZ=3.25;
-    const stride=w<700?2:1;
+    const stride=mobile?3:1;
 
     // Render by ring: 64 fill-style changes instead of one per point; no sort or frame allocations.
     for(let ring=0;ring<CHANNELS;ring++){
@@ -644,15 +732,15 @@ gtag('config','G-XXXXXXXXXX',{
     if(!reduce)raf=requestAnimationFrame(draw);
   }
 
-  buildScene();resize();draw();
+  buildScene();resize();lastMotion=performance.now();draw(lastMotion);
   let resizeTimer;
   addEventListener('resize',()=>{
     clearTimeout(resizeTimer);
-    resizeTimer=setTimeout(()=>{cancelAnimationFrame(raf);resize();draw(last);},120);
+    resizeTimer=setTimeout(()=>{cancelAnimationFrame(raf);resize();lastFrame=0;lastMotion=performance.now();draw(lastMotion);},120);
   },{passive:true});
   document.addEventListener('visibilitychange',()=>{
     if(document.hidden)cancelAnimationFrame(raf);
-    else if(!reduce){last=performance.now();raf=requestAnimationFrame(draw);}
+    else if(!reduce){lastFrame=0;lastMotion=performance.now();raf=requestAnimationFrame(draw);}
   });
 })();
 </script>
